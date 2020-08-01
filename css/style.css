@@ -1,0 +1,249 @@
+Обнуление*/
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+
+@font-face {
+    font-family: 'ProximaNovaT-Thin';
+    src: url('../fonts/ProximaNovaT-Thin.woff2.html') format('woff2'),
+        url('../fonts/ProximaNovaT-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('../fonts/ProximaNova-Black.woff2.html') format('woff2'),
+        url('../fonts/ProximaNova-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Light';
+    src: url('../fonts/ProximaNova-Light.woff2.html') format('woff2'),
+        url('../fonts/ProximaNova-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Semibold';
+    src: url('../fonts/ProximaNova-Semibold.woff2.html') format('woff2'),
+        url('../fonts/ProximaNova-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../fonts/ProximaNova-Bold.woff2.html') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Extrabld';
+    src: url('../fonts/ProximaNova-Extrabld.woff2.html') format('woff2'),
+        url('../fonts/ProximaNova-Extrabld.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url('../fonts/ProximaNova-Regular.woff2.html') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*::-webkit-input-placeholder { color:#FFF;}
+:-moz-placeholder { color:#FFF;}
+.placeholder { color:#FFF;}*/
+
+.wrapper{
+
+}
+/*Основные стили*/
+.container {
+	max-width: 1180;
+	margin: 0px auto;
+	padding: 0px 30px;
+}
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+/*Делаем плашку для выезда*/
+.header:before{
+	content: '';
+	background-color: #cfe7fa;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.header_body {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+	/*z-index: 3;*/
+}
+/*Логотип*/
+.header_logo {
+	flex: 0 0 150px;
+	position: relative;
+	overflow: hidden;
+	z-index: 3;
+}
+.header_logo img{
+	max-width: 100%;
+}
+/*Верстаем бургер*/
+
+.header_burger {
+	display: none;
+}
+.header_menu {}
+.header_list {
+	display: flex;
+	position: relative;
+	z-index: 2;
+}
+.header_list li{
+	display: block;
+	list-style: none;
+	margin: 0px 0px 0px 30px;
+/*	z-index: 4;*/
+}
+.header_link {
+	color:#2e2e2e;
+	text-transform: uppercase;
+	font-size: 18px;
+	text-decoration: none;
+}
+@media (max-width: 767px){
+	.body.lock{ /*Отключаем скрол внутри */
+		overflow: hidden;
+	}
+	.header_body{
+		height: 50px;
+	}
+	.header_logo{
+		flex: 0 0 80px;
+	}
+	.header_burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+	}
+	/*Средняя полоса бургера*/
+	.header_burger:span{
+		position: absolute;
+		/*background-color: #000;*/
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+		transition: all 0.3s ease 0s;
+	}
+	.header_burger:before,
+	.header_burger:after{
+		content: '';
+		background-color: #000;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	/*Верхняя полоса бургера*/
+	.header_burger:before{
+		top: 0;
+	}
+	/*Нижняя полоса бургера*/
+	.header_burger:after{
+		bottom: 0;
+	}
+	/*делаем из бургера крестик*/
+	/*Это уберёт среднюю полосу при нажатии */
+		.header_burger.active span{
+			transform: scale(0); 
+		}
+		/*Поворачиваем верхнюю полоску*/
+	.header_burger.active:before{
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	/*Поворачиваем нижнюю полоску*/
+		.header_burger.active:after{
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	.header_menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto; /*Скрол внутри бургера*/
+		transition: all 0.3s ease 0s;
+		background-color: #18b5a4;
+		padding: 70px 10px 20px 10px;
+	}
+	.header_menu.active{
+		top: 0;
+	}
+	.header_list {
+		display: block;
+	}
+	.header_list li {
+		margin: 0px 0px 20px 0px;
+	}
+	/*Делаем скрол внутри выпадающего меню в бургере в этом пункте увеличиваем шрифт
+	*/
+	.header_link {
+		font-size: 24px;
+	}
+}
+
+
+/*Этот блок под вопросом начало блока*/
+.contact_line {
+	display: flex;
+	padding: 80px;
+}
+.slogan {
+	font-size: 18px;
+	line-height: 25px;
+}
+.contact_tel {}
+.tel1 {
+		font-size: 18px;
+	line-height: 25px;
+}
+.contact_txt {
+		font-size: 18px;
+	line-height: 25px;
+}
+/*Этот блок под вопросом конец блока
