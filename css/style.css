@@ -16,62 +16,10 @@ img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 /*--------------------*/
 
-@font-face {
-    font-family: 'ProximaNovaT-Thin';
-    src: url('../fonts/ProximaNovaT-Thin.woff2.html') format('woff2'),
-        url('../fonts/ProximaNovaT-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ProximaNova-Black';
-    src: url('../fonts/ProximaNova-Black.woff2.html') format('woff2'),
-        url('../fonts/ProximaNova-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ProximaNova-Light';
-    src: url('../fonts/ProximaNova-Light.woff2.html') format('woff2'),
-        url('../fonts/ProximaNova-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ProximaNova-Semibold';
-    src: url('../fonts/ProximaNova-Semibold.woff2.html') format('woff2'),
-        url('../fonts/ProximaNova-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ProximaNova-Bold';
-    src: url('../fonts/ProximaNova-Bold.woff2.html') format('woff2'),
-        url('../fonts/ProximaNova-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ProximaNova-Extrabld';
-    src: url('../fonts/ProximaNova-Extrabld.woff2.html') format('woff2'),
-        url('../fonts/ProximaNova-Extrabld.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ProximaNova-Regular';
-    src: url('../fonts/ProximaNova-Regular.woff2.html') format('woff2'),
-        url('../fonts/ProximaNova-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 /*::-webkit-input-placeholder { color:#FFF;}
 :-moz-placeholder { color:#FFF;}
 .placeholder { color:#FFF;}*/
-
-.wrapper{
-
-}
 /*Основные стили*/
 .container {
 	max-width: 1180;
@@ -83,7 +31,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 50;
+	z-index: 60;
 }
 /*Делаем плашку для выезда*/
 .header:before{
@@ -120,7 +68,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 .header_burger {
 	display: none;
 }
-.header_menu {}
+
 .header_list {
 	display: flex;
 	position: relative;
@@ -237,7 +185,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 	font-size: 18px;
 	line-height: 25px;
 }
-.contact_tel {}
+
 .tel1 {
 		font-size: 18px;
 	line-height: 25px;
