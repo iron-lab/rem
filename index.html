@@ -2,67 +2,96 @@
 <!DOCTYPE html>
 <!-- Оболочка документа, указываем язык содержимого -->
 <html lang="ru">
-	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
-	<head>
-		<!-- Заголовок страницы в браузере -->
-		<title>Выездной ремонт компьютеров в г. Москва</title>
-		<!-- Адаптив -->
-		<meta name="viewport" content="width=device-width">
-		<link rel="icon" type="images/favicon.ico" sizes="16x16" href="images/favicon.ico">
-		<!-- Подключаем CSS -->
-		<link rel="stylesheet" href="css/style.css" />
-		<!-- Кодировка страницы -->
-		<meta charset="UTF-8">
-	</head>
-	<!-- Отображаемое тело страницы -->
-	<body>
-		<div class="wrapper">
-			<!-- Контент -->
-			<header class="header">
-				<div class="container">
-					<div class="header_body">
-						<a href="#" class="header_logo">
-							<img src="images/logo.png" alt="">
-						</a>
-						<div class="header_burger">
-							<span></span>
-						</div>
-						<nav class="header_menu">
-							<ul class="header_list">
-								<li>
-									<a href="" class="header_link">Узнать стоимость</a>
-								</li>
-								<li>
-									<a href="" class="header_link">Наши услуги</a>
-								</li>
-								<li>
-									<a href="" class="header_link">Отзывы</a>
-								</li>
-								<li>
-									<a href="" class="header_link">Гарантия</a>
-								</li>
-								<li>
-									<a href="" class="header_link">Контакты</a>
-								</li>
-							</ul>
-						</nav>
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Выездной ремонт компьютеров в г. Москва</title>
+	<!-- Адаптив -->
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" type="images/favicon.ico" sizes="16x16" href="images/favicon.ico">
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<!-- Контент -->
+		<header class="header">
+			<div class="container">
+				<div class="header_body">
+					<a href="#" class="header_logo">
+						<img src="images/logo.png" alt="">
+					</a>
+					<div class="header_burger">
+						<span></span>
 					</div>
-				</div>
-			</header>
-			<div class="contact_line">
-				<div class="container">
-					<div class="slogan">Выездной компьютерный <br> сервис г. Москва</div>
-					<div class="contact_tel">
-						<a href="tel:+79858076419" class="tel1"><span>+79858076419</span></a>
-					</div>
-					<div class="contact_txt"><strong>Бесплатная консультация</strong></div>
+					<nav class="header_menu">
+						<ul class="header_list">
+							<li>
+								<a href="" class="header_link">Узнать стоимость</a>
+							</li>
+							<li>
+								<a href="" class="header_link">Наши услуги</a>
+							</li>
+							<li>
+								<a href="" class="header_link">Отзывы</a>
+							</li>
+							<li>
+								<a href="" class="header_link">Гарантия</a>
+							</li>
+							<li>
+								<a href="" class="header_link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
+		</header>
+		<section class="fullscreen">
+			<div class="fullscreen_body">
+				<!--!Контейнер-->
+				<h1 class="fullscreen_title"> Выездной компьютерный <br> сервис в г.Москва</h1>
+				<!--?Позже скорее всего заменю на DIV-->
+				<a href="tel:+79858076419" class="fullscreen_tel"><span>+79858076419</span></a>
+				<div class="fullscreen_text">Бесплатная консультация</div>
+				<a href="" class="fullscreen_link">Вызвать мастера</a>
+			</div>
+		</section>
+		<div class="contact_line">
+			<div class="container">
+				<div class="slogan">Выездной компьютерный <br> сервис г. Москва</div>
+				<div class="contact_tel">
+					<a href="tel:+79858076419" class="tel1"><span>+79858076419</span></a>
+				</div>
+				<div class="contact_txt"><strong>Бесплатная консультация</strong></div>
+			</div>
 		</div>
-		<!-- Подключаем jQuery -->
-		<!-- <script src="libs/jquery/jquery-3.5.1.min.js"></script> -->
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-		<!-- Подключаем файл, JS скриптов -->
-		<script src="js/script.js"></script>
-	</body>
+		<footer class="footer">
+			<div class="footer_body">
+				<div class="footer_logo">
+					<img src="images/logo.png" alt="">
+				</div>
+				<div class="footer_title">Выездной компьютерный <br> сервис г. Москва</div>
+				<div class="footer_tel">
+					<a href="tel:+79858076419" class="footer_tel1"><span>+79858076419</span></a> <br>
+					<span>Бесплатная консультация</span>
+					<div class="footer_button">
+						<a href="" class="footer_button1">вызвать мастера</a>
+					</div>
+				</div>
+			</div>
+	</div>
+	</footer>
+	</div>
+	<!-- Подключаем jQuery -->
+	<!-- <script src="libs/jquery/jquery-3.5.1.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!-- Подключаем файл, JS скриптов -->
+	<script src="js/script.js"></script>
+</body>
+
 </html>
