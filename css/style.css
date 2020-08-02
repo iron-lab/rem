@@ -193,15 +193,26 @@ body{
 	display: flex;
 	/* margin: 0px auto; */
 	padding: 90px 0;
-
 }
 .fullscreen__body {
+	display: flex;
+	position: absolute;
+	justify-content: space-around;
+	align-items: center;
+	background-color: antiquewhite;
+	flex: 1 1 auto;
+	width: 100%;
+	margin: 0px auto;
+	top: 10;
+	left: 0;
 }
 .fullscreen__title {
 }
 .fullscreen__tel {
 }
-.fullscreen__text {
+.fullscreen__text{
+	font-size: 14px;
+	display: inline-block;
 }
 .fullscreen__link {
 }
