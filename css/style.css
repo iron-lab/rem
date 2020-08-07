@@ -23,8 +23,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 /*Основные стили*/
 html,
 body{
-	/* background-color: #333; */
-	font-family: Arial, "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: Arial, "Hlvetica Neue", Arial, Helvetica, sans-serif;
 	color: hsl(0, 0%, 0%);
 	font-size: 20px;
 }
@@ -34,19 +33,19 @@ body{
 	flex-direction: column;
 }
 .container {
-	max-width: 1180;
+	max-width: 100%;
 	margin: 0px auto;
-	padding: 0px 30px;
+	padding: 0px 50px;
 }
 .header {
 	position: fixed;
 	width: 100%;
-	top: 0;
-	left: 0;
+	top: 0px;
+	left: 0px;
 	z-index: 60;
 }
-/*Делаем плашку для выезда*/
-.header:before{
+/* Делаем плашку для выезда */
+.header::before{
 	content: '';
 	background-color: #cfe7fa;
 	position: absolute;
@@ -56,59 +55,55 @@ body{
 	height: 100%;
 	z-index: 2;
 }
-
-.header_body {
+.header__body {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
 	height: 80px;
 	align-items: center;
-	/*z-index: 3;*/
 }
-/*Логотип*/
-.header_logo {
+.header__logo {
 	flex: 0 0 150px;
 	position: relative;
 	overflow: hidden;
 	z-index: 3;
 }
-.header_logo img{
+.header__logo img{
 	max-width: 100%;
 }
-/*Верстаем бургер*/
-
-.header_burger {
+/* Верстаем бургер */
+.header__burger {
 	display: none;
 }
 
-.header_list {
+.header__list {
 	display: flex;
 	position: relative;
 	z-index: 2;
 }
-.header_list li{
+.header__list li{
 	display: block;
 	list-style: none;
 	margin: 0px 0px 0px 30px;
 /*	z-index: 4;*/
 }
-.header_link {
+.header__link {
 	color:#2e2e2e;
 	text-transform: uppercase;
 	font-size: 18px;
 	text-decoration: none;
 }
-@media (max-width: 767px){
-	.body.lock{ /*Отключаем скрол внутри */
+@media (max-width: 767px) {
+	.body.lock {
 		overflow: hidden;
 	}
-	.header_body{
+	.header__body{
 		height: 50px;
 	}
-	.header_logo{
+	.header__logo{
 		flex: 0 0 80px;
 	}
-	.header_burger {
+	.header__burger {
 		display: block;
 		position: relative;
 		width: 30px;
@@ -116,10 +111,8 @@ body{
 		position: relative;
 		z-index: 3;
 	}
-	/*Средняя полоса бургера*/
-	.header_burger:span{
-		position: absolute;
-		/*background-color: #000;*/
+	/* Средняя полоса бургера */
+	.header__burger span {
 		position: absolute;
 		left: 0;
 		width: 100%;
@@ -127,8 +120,8 @@ body{
 		top: 9px;
 		transition: all 0.3s ease 0s;
 	}
-	.header_burger:before,
-	.header_burger:after{
+	.header__burger:before,
+	.header__burger:after{
 		content: '';
 		background-color: #000;
 		position: absolute;
@@ -137,30 +130,30 @@ body{
 		left: 0;
 		transition: all 0.3s ease 0s;
 	}
-	/*Верхняя полоса бургера*/
-	.header_burger:before{
+	/* Верхняя полоса бургера */
+	.header__burger:before{
 		top: 0;
 	}
-	/*Нижняя полоса бургера*/
-	.header_burger:after{
+	/* Нижняя полоса бургера */
+	.header__burger:after{
 		bottom: 0;
 	}
 	/*делаем из бургера крестик*/
 	/*Это уберёт среднюю полосу при нажатии */
-		.header_burger.active span{
-			transform: scale(0); 
-		}
-		/*Поворачиваем верхнюю полоску*/
-	.header_burger.active:before{
+	.header__burger.active span{
+		transform: scale(0);
+	}
+	/*Поворачиваем верхнюю полоску*/
+	.header__burger.header__burger.active:before{
 		transform: rotate(45deg);
 		top: 9px;
 	}
 	/*Поворачиваем нижнюю полоску*/
-		.header_burger.active:after{
+	.header__burger.active:after{
 		transform: rotate(-45deg);
 		bottom: 9px;
 	}
-	.header_menu {
+	.header__menu {
 		position: fixed;
 		top: -100%;
 		left: 0;
@@ -171,62 +164,20 @@ body{
 		background-color: #18b5a4;
 		padding: 70px 10px 20px 10px;
 	}
-	.header_menu.active{
+	.header__menu.active{
 		top: 0;
 	}
-	.header_list {
+	.header__list{
 		display: block;
 	}
-	.header_list li {
+	.header__list li{
 		margin: 0px 0px 20px 0px;
 	}
-	/*Делаем скрол внутри выпадающего меню в бургере в этом пункте увеличиваем шрифт
-	*/
-	.header_link {
+	/*Делаем скрол внутри выпадающего меню в бургере в этом пункте увеличиваем шрифт*/
+	.header__link{
 		font-size: 24px;
 	}
 }
-.fullscreen {
-	min-height: 100vh;
-	background-image: url(../images/header-bg.jpg);
-	/* background-color: #666; */
-	display: flex;
-	/* margin: 0px auto; */
-	padding: 90px 0;
-}
-.fullscreen__body {
-	display: flex;
-	position: absolute;
-	justify-content: space-around;
-	align-items: center;
-	background-color: antiquewhite;
-	flex: 1 1 auto;
-	width: 100%;
-	margin: 0px auto;
-	top: 10;
-	left: 0;
-}
-.fullscreen__title {
-}
-.fullscreen__tel {
-}
-.fullscreen__text{
-	font-size: 14px;
-	display: inline-block;
-}
-.fullscreen__link {
-}
-.full__content {
-}
-.full__container {
-}
-.full__title {
-}
-.full__text {
-}
-.full__list {
-}
-
 /*Этот блок под вопросом начало блока*/
 .contact_line {
 	display: flex;
